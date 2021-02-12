@@ -1,12 +1,12 @@
 import campaignReducer from './campaignReducer';
 import CampaingAction from './campaignAction';
 
-describe('root reducer', () => {
+describe('init reducer', () => {
   it('returns the initial state', () => {
     expect(campaignReducer([],true)).toEqual([]);
   });
 
-  it('sets categories', () => {
+  it('sets data campaign', () => {
     const campaignData = [
       {
         "id": 94597,
@@ -32,9 +32,12 @@ describe('root reducer', () => {
         "custom_fb_pixel": ""
       },
     ];
-    
-    expect(campaignReducer({}, { type: CampaingAction.GET_DATA, payload:{data:campaignData} }))
-      .toEqual({ listCampaign:campaignData, loading: false});
+
+    expect(campaignReducer({}, { 
+      type: CampaingAction.GET_DATA, 
+      payload:{data:campaignData} 
+    }))
+    .toEqual({ listCampaign:campaignData, loading: false});
   });
 
 });

@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import  campaignAction  from "../../redux/campaign/campaignAction";
+import ListCampaignComponent from './listCampaign/listCampaign'
 
 
 function HomePage(){
@@ -13,11 +14,10 @@ function HomePage(){
   useEffect(() => {
     dispatch(getData())
   },[dispatch, getData]);
+  
   return(
     <div className="homepage">
-      {/* {listCampaign.map(item =>(
-        <div>{item.title}</div>
-      ))} */}
+      <ListCampaignComponent {...listCampaign}/>
     </div>
   )
 }

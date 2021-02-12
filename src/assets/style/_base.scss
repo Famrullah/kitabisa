@@ -11,4 +11,13 @@ html{
 body{
   box-sizing: border-box;
   height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+img{
+  // float: left;
+  width:  100%;
+  height: 250px;
+  object-fit: cover;
 }
