@@ -5,7 +5,7 @@ const initState = {
   loading:true
 };
 
-export default function todoReducer(state = initState, action) {
+export default function campaignReducer(state = initState, action) {
   switch (action.type) {
     case campaignAction.GET_DATA:
       return {
