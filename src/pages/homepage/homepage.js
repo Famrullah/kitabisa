@@ -16,9 +16,11 @@ function HomePage(){
   },[dispatch, getData]);
   
   return(
-    <div className="homepage">
-      <ListCampaignComponent {...listCampaign}/>
-    </div>
+    <section>
+      <div className="homepage">
+        <ListCampaignComponent {...listCampaign}/>
+      </div>
+    </section>
   )
 }
 
